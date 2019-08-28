@@ -1,0 +1,20 @@
+<div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+    
+        <% if params[:controller] != 'pages' && params[:actions] !='home' %>
+            <li><a href="/">Home</a></li>
+        <% end %>
+        <li><a href="#">CheatSheet</a></li>
+        <li><a href="#">Favorite Politician</a></li>
+        <% if params[:controller] != 'profiles' && params[:action] != 'show' %>
+            <%= link_to "My profile", current_profile ? current_profile : log_in_path %>
+        <% end %>
+        <li><a href="#">Contact</a></li>
+        <li><a href="https://www.Vote.gov/" target="_blank">Register to vote here</a></li>
+        <li><%= link_to current_profile ? "Log Out" : "Log In", current_profile ? logout_path : log_in_path %> </li> 
+    </ul>
+</div>

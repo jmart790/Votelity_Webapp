@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReactOnRailsWithWebpacker</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'hello-world-bundle' %>
+  </head>
+
+  <body>
+    <%#= yield %>
+    <nav role="navigation">
+    <div id="menuToggle">
+    <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+                  <a href="#"><li>CheatSheet</li></a>
+                  <a href="#"><li>Favorite Politician</li></a>
+                  <a href="#"><li>My profile</li></a>
+                  <a href="#"><li>Contact</li></a>
+                  </ul>
+          </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="parallax-wrapper"><span>Parallax</span></div>
+        <!-- <div class="parallax-wrapper"> -->
+        <div class="content">
+        <h1> STUFF WORD THINGS </h1>
+        <!-- </div> -->
+    </div>
+    <div class="regular-wrapper">
+        <div class="content">
+        <p> This is a test And Word which mean things.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

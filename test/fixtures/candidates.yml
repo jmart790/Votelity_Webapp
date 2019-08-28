@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ballot_name: MyString
+  election_office: MyString
+  party: MyString
+  status: MyString
+
+two:
+  ballot_name: MyString
+  election_office: MyString
+  party: MyString
+  status: MyString

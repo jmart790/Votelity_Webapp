@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  outcome_date: 2019-08-06
+  outcome: false
+  synopsis: MyString
+
+two:
+  title: MyString
+  url: MyString
+  outcome_date: 2019-08-06
+  outcome: false
+  synopsis: MyString

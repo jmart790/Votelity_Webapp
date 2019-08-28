@@ -1,0 +1,18 @@
+.footer {
+  display: grid;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: auto;
+  height: 200px;
+  background: white;
+}
+
+.eagle {
+  background: url('https://votelity-bucket.herokuapp.com/images/eagle.png');
+  display: grid;
+  height: 180px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 7%;
+}

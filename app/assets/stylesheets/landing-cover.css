@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.parallax-cover {
+  perspective: 1px;
+  height: 120vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.parallax-cover:after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  left: -8%;
+  right: -8%;
+  border-radius: 50%;
+  bottom: -25px;
+  background: #fff;
+}
+.parallax-layer1 {
+  background: url('https://votelity-bucket.herokuapp.com/images/flag-background.png');
+  background-position: center;
+  background-size: cover;
+  left: 0;
+  height: 124vh;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+}
+.layer-img-2 {
+  background: url('https://votelity-bucket.herokuapp.com/images/capitol-background.png');
+  background-position: center;
+  background-size: cover;
+  left: 0;
+  height: 110vh;
+  position: relative;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+}
+.text-box {
+  display: grid;
+  grid-gap: 10px;
+}
+#a_non_partisan_marketplace_to_ {
+  opacity: 0.703;
+  overflow: hidden;
+  height: 192px;
+  line-height: 35px;
+  margin-top: 13px;
+  text-align: right;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 3px;
+}
+#price_match_politics {
+  white-space: nowrap;
+  display: block;
+  margin-top: -4px;
+  text-align: left;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 3px;
+  width: 38%;
+}
+#voteli-title {
+  overflow: hidden;
+  height: 225px;
+  line-height: 249px;
+  margin-top: -21px;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 10vw;
+  font-style: normal;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 0.4px;
+}
+.caps {
+  text-transform: uppercase;
+}
+#red-line-logo {
+  border: 10px solid #f81b1b;
+  margin-right: 1rem;
+  width: 23vw;
+}
+.w-50 {
+  margin: 15% 10% auto auto;
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+.voteli-slogan {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: -41px;
+}
+.search-candidates {
+  background: white;
+  height: 800px;
+  width: 100vw;
+}
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: table;
+}
+.scroll-down {
+  opacity: 0.3;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+}
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: '';
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}

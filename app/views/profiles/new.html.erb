@@ -1,0 +1,41 @@
+<%= form_with(model: @profile, local: true) do |form| %>
+    
+    <%= render "layouts/ham" %>
+
+    <div  class="background-container">  
+    <div class="login-wrap">
+      <div class="center">
+        <div class="header">
+          <h2 class="animation a1">Welcome</h2>
+        </div>
+
+    <div class="form">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, required: true, class:"form-field animation a3", placeholder: "First Name" %>
+    </div>
+    
+    <div class="form">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, required: true, class:"form-field animation a4", placeholder: "Last Name" %>
+    </div>
+
+    <div class="form">
+        <%= form.label :email %>
+        <%= form.email_field :email, required: true, class:"form-field animation a3", placeholder: "email" %>
+    </div>
+
+    <div class="form">
+        <%= form.label :password %>
+        <%= form.password_field :password, required: true, class:"form-field animation a4", placeholder: "password"  %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+
+    <%= link_to "Log In", log_in_path %>
+ </div>
+ </div>
+<% end %>
+
+<%= render "layouts/footer" %>

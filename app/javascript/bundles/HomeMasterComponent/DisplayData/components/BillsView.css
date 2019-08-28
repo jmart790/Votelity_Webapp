@@ -1,0 +1,66 @@
+.candidates-bills-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px;
+}
+
+.bills-container {
+  width: 525px;
+  height: 210px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  margin: 40px;
+  overflow: scroll;
+  padding-top: 25px;
+}
+
+.bill-container {
+  display: grid;
+  justify-items: baseline;
+  align-content: center;
+  grid-template-columns: 50px 360px 100px;
+  padding: 0 14px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.bill-divider {
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.151);
+  margin: 15px;
+}
+.bill-title,
+.expand-btn {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.expand-btn:hover {
+  cursor: pointer;
+}
+.bills-container.expanded {
+  height: 350px;
+}
+.bill-details {
+  display: grid;
+  padding: 5px 63px;
+  align-content: center;
+  color: #a3a3a3;
+  grid-template-rows: 25px 25px auto;
+}
+.votesmart-label {
+  color: #1270a3;
+  font-style: italic;
+}
+.date-outcome {
+  padding-bottom: 10px;
+  color: #a2a2a27e;
+}
+.expand-logo {
+  font-size: 2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #a2a2a27e;
+  padding-left: 15px;
+}

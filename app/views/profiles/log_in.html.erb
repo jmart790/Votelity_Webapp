@@ -1,0 +1,38 @@
+<%= form_with(model: @profile, url: new_session_path, local: true) do |form| %>
+    <%= render "layouts/ham" %>
+
+ <div  class="background-container">  
+    <div class="login-wrap">
+      <div class="center">
+        <div class="header">
+            <h2 class="animation a1">Welcome Back</h2>
+            <h4 class="animation a2">Log in to your account <br> using email and password</h4>
+        </div>
+        
+        <div class="form">
+            <%= form.label :email %>
+            <%= form.email_field  :email, required: true, class:"form-field animation a3", placeholder: "Email" %>
+        
+
+        <div class="field" >
+            <%= form.label :password %>
+            <%= form.password_field :password, required: true, class:"form-field animation a4", placeholder: "Password" %>
+    
+
+        <div class="actions">
+            <%= form.submit %>
+          
+        </div>
+        <div class="signup">
+            <%= link_to "Sign Up", new_profile_path %>
+        </div>
+        </div>
+      </div>
+    </div>
+ </div>
+
+<% end %>
+
+<%= render "layouts/footer" %>
+
+

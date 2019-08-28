@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+
+.background-container{
+    box-sizing: border-box;
+    background: #082C60;
+    font-family: 'Rubik', sans-serif;
+}
+.login-wrap {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, 0,0);
+  transform: translate3d(-50%, 0,0);
+  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+    background: #fff;
+  -webkit-animation-name: center;
+          animation-name: center;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.actions{
+  margin-top: 25px;
+}
+.center {
+  color: white;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: calc(50vh - 162.5px) 40px;
+}
+
+.header > h2 {
+  margin: 0;
+  color: #D90429;
+}
+
+.header > h4 {
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #8D99AE;
+}
+
+.form {
+  width: 100%;
+}
+
+.form > p {
+  text-align: right;
+}
+
+.form > p > a {
+  color: white;
+  font-size: 14px;
+}
+
+.form-field {
+  height: 46px;
+  width: 80%;
+  padding: 0 16px;
+  border: 2px solid #8D99AE;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #EF233C;
+}
+
+.form > button {
+  width: 100%;
+  padding: 12px 10px;
+  border: 0;
+  background: #D90429;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+}
+
+.animation {
+  letter-spacing: 2px;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a1 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.a2 {
+  line-height: 23px;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.a3 {
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+}
+
+.a4 {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
+.a5 {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.a6 {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes center {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+@keyframes center {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 100vh;
+  }
+}
+.signup{
+    text-align: center;
+}
+
+
