@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import './BillsView.css'
+import BillList from './BillList'
 
 class BillsContainer extends Component {
   state = { expanded: false, expandClass: '' }
 
-  voteButton(vote) {
+  handleCandidateVote(vote) {
     let button = ''
     switch (vote) {
       case 'D':
@@ -50,6 +50,45 @@ class BillsContainer extends Component {
     }
   }
 
+  handleVotes(billList) {
+    let display = null
+    if (billList.length < 1) {
+      display = (
+        <div className='bill-container'>
+          <span></span>
+          <span className='bill-title'>
+            Sorry, the candidate has no votes associated with this issue.
+          </span>
+        </div>
+      )
+    } else {
+      display = billList.map((bill, id) => {
+        return (
+          <div key={id}>
+            <div className={`bill-container ${this.state.expandClass}`}>
+              <div className='expand-btn' onClick={() => this.expandBills()}>
+                <span className='expand-logo'>{this.state.expanded ? '-' : '+'}</span>
+              </div>
+
+              <span className='bill-title' key={id}>
+                {bill.bill_name}
+              </span>
+
+              <div
+                className={`third-col candidate-vote ${this.handleCandidateVote(
+                  bill.candidate_vote
+                )}`}
+              />
+            </div>
+            {this.moreDetails(bill)}
+            <div className={id < billList.length - 1 ? 'bill-divider' : ''} />
+          </div>
+        )
+      })
+    }
+    return display
+  }
+
   removeDuplicates(candidateBills) {
     const seen = new Set()
     const uniqueVotes = candidateBills.filter(bill => {
@@ -61,57 +100,15 @@ class BillsContainer extends Component {
   }
 
   render() {
-    console.log('before uniq ', this.props.firstCandidateVotes)
     let newFirstVotes = this.removeDuplicates(this.props.firstCandidateVotes)
-    console.log('after uniq', newFirstVotes)
     let newSecondVotes = this.removeDuplicates(this.props.secondCandidateVotes)
     return (
       <div className='candidates-bills-container'>
         <div className={`bills-container ${this.state.expandClass}`}>
-          {newFirstVotes.map((bill, id) => {
-            return (
-              <div key={id}>
-                <div className={`bill-container ${this.state.expandClass}`}>
-                  <div className='expand-btn' onClick={() => this.expandBills()}>
-                    <span className='expand-logo'>{this.state.expanded ? '-' : '+'}</span>
-                  </div>
-
-                  <span className='bill-title' key={id}>
-                    {bill.bill_name}
-                  </span>
-
-                  <div className={`candidate-vote ${this.voteButton(bill.candidate_vote)}`} />
-                </div>
-                {this.moreDetails(bill)}
-                <div
-                  className={id < this.props.firstCandidateVotes.length - 1 ? 'bill-divider' : ''}
-                />
-              </div>
-            )
-          })}
+          {this.handleVotes(newFirstVotes)}
         </div>
         <div className={`bills-container ${this.state.expandClass}`}>
-          {newSecondVotes.map((bill, id) => {
-            return (
-              <div key={id}>
-                <div className={`bill-container ${this.state.expandClass}`}>
-                  <div className='expand-btn' onClick={() => this.expandBills()}>
-                    <span className='expand-logo'>{this.state.expanded ? '-' : '+'}</span>
-                  </div>
-
-                  <span className='bill-title' key={id}>
-                    {bill.bill_name}
-                  </span>
-
-                  <div className={`candidate-vote ${this.voteButton(bill.candidate_vote)}`} />
-                </div>
-                {this.moreDetails(bill)}
-                <div
-                  className={id < this.props.secondCandidateVotes.length - 1 ? 'bill-divider' : ''}
-                />
-              </div>
-            )
-          })}
+          {this.handleVotes(newSecondVotes)}
         </div>
       </div>
     )

@@ -21,7 +21,7 @@
 .index-background {
   /* height: 480px; */
   background-image: url('https://votelity-bucket.herokuapp.com/images/index-background.jpg');
-  background-position: center;
+  background-position: top;
   background-size: contain;
   background-repeat: space;
 }

@@ -8,13 +8,56 @@
         <% if params[:controller] != 'pages' && params[:actions] !='home' %>
             <li><a href="/">Home</a></li>
         <% end %>
-        <li><a href="#">CheatSheet</a></li>
-        <li><a href="#">Favorite Politician</a></li>
-        <% if params[:controller] != 'profiles' && params[:action] != 'show' %>
-            <%= link_to "My profile", current_profile ? current_profile : log_in_path %>
-        <% end %>
-        <li><a href="#">Contact</a></li>
-        <li><a href="https://www.Vote.gov/" target="_blank">Register to vote here</a></li>
-        <li><%= link_to current_profile ? "Log Out" : "Log In", current_profile ? logout_path : log_in_path %> </li> 
+        <li class="con-tooltip right">
+            <a href="#">
+                My Profile
+                <div class="tooltip ">
+                    <p>coming soon</p>
+                </div>
+            </a>
+            
+        </li>
+        <li class="con-tooltip right">
+            <a href="#">
+                Cheat Sheet
+                <div class="tooltip ">
+                    <p>coming soon</p>
+                </div>
+            </a>
+        </li>
+        <li class="con-tooltip right">
+            <a href="#">
+                Favorite Politicians
+                <div class="tooltip ">
+                    <p>coming soon</p>
+                </div>
+            </a>
+            
+        </li>
+        <%# <% if params[:controller] != 'profiles' && params[:action] != 'show' %> 
+            <%# <%= link_to "My profile", current_profile ? current_profile : log_in_path %> 
+        <%# <% end %> 
+        <li class="con-tooltip right">
+            <a href="https://www.Vote.gov/" target="_blank">Register to vote!</a>
+        </li>
+        <li class="con-tooltip right">
+            <a href="#">
+                Contact Us
+                <div class="tooltip ">
+                    <p>coming soon</p>
+                </div>
+            </a>
+            
+        </li>
+        <%# <li><%= link_to current_profile ? "Log Out" : "Log In", current_profile ? logout_path : log_in_path </li>  %>
+        <li class="con-tooltip right">
+            <a href="#">
+                Log in
+                <div class="tooltip ">
+                    <p>coming soon</p>
+                </div>
+            </a>
+             
+        </li>
     </ul>
 </div>

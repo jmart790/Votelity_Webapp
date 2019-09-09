@@ -9,6 +9,7 @@ a {
   transition: color 0.3s ease;
   letter-spacing: 1px;
   font-size: 22px;
+  position: relative;
 }
 a:hover {
   color: #f81b1b;
@@ -80,10 +81,9 @@ a:hover {
   transform: rotate(-45deg) translate(0, -1px);
 }
 #menu {
-  opacity: 0.9;
-  border-radius: 15px;
+  opacity: 0.97;
+  border-radius: 0 0 15px 0;
   position: fixed;
-  /* font-size: 22px; */
   width: 300px;
   margin: -100px 0 0 -50px;
   padding: 50px;

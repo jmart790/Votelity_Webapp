@@ -62,7 +62,7 @@ class IssuesLink extends React.Component {
 
   render() {
     const { open } = this.state
-    console.log('state', this.state)
+    // console.log('state', this.state)
     return (
       <React.Fragment>
         <div className='issues-filter'>

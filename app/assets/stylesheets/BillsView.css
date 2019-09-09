@@ -7,20 +7,20 @@
 
 .bills-container {
   width: 525px;
-  height: 210px;
+  max-height: 210px;
   box-shadow: 3px 3px 5px 6px #ccc;
   margin: 40px;
   overflow: scroll;
   padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .bill-container {
   display: grid;
   justify-items: baseline;
   align-content: center;
-  grid-template-columns: 50px 360px 100px;
+  grid-template-columns: 50px auto 100px;
   padding: 0 14px;
-  height: 30px;
   border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 .bills-container.expanded {
-  height: 350px;
+  max-height: 350px;
 }
 .bill-details {
   display: grid;
@@ -63,4 +63,8 @@
   align-items: center;
   color: #a2a2a27e;
   padding-left: 15px;
+}
+
+.third-col {
+  margin-left: auto;
 }

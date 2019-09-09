@@ -21,16 +21,16 @@
   position: relative;
 }
 .title-candidates {
-  align-items: center;
+  /* align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: center; */
   text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
+  /* font-family: 'Helvetica Neue', sans-serif; */
   font-size: 2rem;
-  font-style: normal;
+  /* font-style: normal; */
   font-weight: lighter;
   color: #08295a;
-  margin-top: -17px;
+  /* margin-top: -17px; */
   letter-spacing: 2px;
 }
 .search-candidates {

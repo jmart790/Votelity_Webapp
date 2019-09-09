@@ -1,5 +1,5 @@
 import React from 'react'
-import './main-menu.css'
+// import './main-menu.css'
 import SubMenu from './SubMenu'
 
 class MainMenu extends React.Component {
@@ -15,13 +15,16 @@ class MainMenu extends React.Component {
         <div className='menu-container'>
           <div className='menu-categories'>
             <div
-              className={`category-label title-text ${
+              className={`category-label title-text con-tooltip bottom ${
                 this.state.submenu == 'History' ? 'category-selected' : ''
               }`}
               id='menu-history'
-              onClick={() => this.handleMenuClick('History')}
+              // onClick={() => this.handleMenuClick('History')}
             >
               History
+              <div class='tooltip '>
+                <p>coming soon</p>
+              </div>
               <div className={this.state.submenu == 'History' ? 'gradient-line' : ''}>&nbsp;</div>
             </div>
             <div
@@ -35,13 +38,16 @@ class MainMenu extends React.Component {
               <div className={this.state.submenu == 'Issues' ? 'gradient-line' : ''}>&nbsp;</div>
             </div>
             <div
-              className={`category-label title-text ${
+              className={`category-label title-text con-tooltip bottom ${
                 this.state.submenu == 'Funding' ? 'category-selected' : ''
               }`}
               id='menu-funding'
-              onClick={() => this.handleMenuClick('Funding')}
+              // onClick={() => this.handleMenuClick('Funding')}
             >
               Funding
+              <div class='tooltip '>
+                <p>coming soon</p>
+              </div>
               <div className={this.state.submenu == 'Funding' ? 'gradient-line' : ''}>&nbsp;</div>
             </div>
           </div>

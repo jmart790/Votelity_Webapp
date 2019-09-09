@@ -7,7 +7,7 @@ class HomeMasterComponent extends Component {
   state = {
     candidate1: {},
     candidate2: {},
-    categories: [],
+    categories: [2, 93, 30, 32, 37, 38, 40, 101, 76, 67],
     candidate_votes: []
   }
 
@@ -20,7 +20,7 @@ class HomeMasterComponent extends Component {
       axios
         .get(`/api.json?candidate1=${candidate1}&candidate2=${candidate2}&categories=${categories}`)
         .then(response => this.setState({ candidate_votes: response.data.votes }))
-      console.log('Both candidates picked')
+      // console.log('Both candidates picked')
     }
   }
 
@@ -30,7 +30,7 @@ class HomeMasterComponent extends Component {
 
   handleCategories = async categories => {
     await this.setState({ categories })
-    console.log(`MasterComponent has categories of:  ${this.state.categories}`)
+    // console.log(`MasterComponent has categories of:  ${this.state.categories}`)
   }
 
   render() {
